@@ -209,6 +209,19 @@ layout: none
       margin-right: 6px;
     }
 
+    /* ── Maps Links ── */
+    a.maps-link {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a.maps-link::after {
+      content: " \2197";
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
     /* ── Restaurant Cards ── */
     .resto-item {
       padding: 12px 0;
@@ -367,10 +380,10 @@ layout: none
       <div class="card-body">
         <ul class="items">
           <li><span class="confirmed">Confirmed</span> <span class="item-name">Arrive HNL 11:08am</span> <span class="item-detail">&mdash; AS 821, conf QUDLCT</span></li>
-          <li><span class="item-name">Check into Halepuna Waikiki</span> <span class="item-detail">&mdash; 2233 Helumoa Rd, 808-921-7272</span></li>
-          <li><span class="item-name">Settle in, walk Waikiki Beach</span></li>
+          <li><span class="item-name">Check into <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Halepuna+Waikiki+by+Halekulani+Honolulu+HI">Halepuna Waikiki</a></span> <span class="item-detail">&mdash; 2233 Helumoa Rd, 808-921-7272</span></li>
+          <li><span class="item-name">Settle in, walk <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Waikiki+Beach+Honolulu+HI">Waikiki Beach</a></span></li>
           <li><span class="item-name">Sunset</span> <span class="item-detail">&mdash; from the hotel or beach</span></li>
-          <li><span class="confirmed">Confirmed</span> <span class="item-name">Dinner: Senia</span> <span class="item-detail">&mdash; Chef's Counter, 6:30pm, 75 N King St, conf #11705</span></li>
+          <li><span class="confirmed">Confirmed</span> <span class="item-name">Dinner: <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Senia+Honolulu+HI">Senia</a></span> <span class="item-detail">&mdash; Chef's Counter, 6:30pm, 75 N King St, conf #11705</span></li>
         </ul>
       </div>
     </details>
@@ -385,9 +398,9 @@ layout: none
       </summary>
       <div class="card-body">
         <ul class="items">
-          <li><span class="item-time">6:00am</span> <span class="item-name">Diamond Head Crater Hike</span> <span class="item-detail">&mdash; 1.8 mi, 560ft gain. Go at opening to beat crowds and heat.</span></li>
-          <li><span class="item-name">Leonard's Bakery</span> <span class="item-detail">&mdash; Malasadas on the way back. Cash only.</span></li>
-          <li><span class="item-name">Pearl Harbor / USS Arizona Memorial</span> <span class="item-detail">&mdash; Late-morning/early-afternoon slot. Free timed entry, must book in advance.</span></li>
+          <li><span class="item-time">6:00am</span> <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Diamond+Head+State+Monument+Honolulu+HI"><span class="item-name">Diamond Head Crater Hike</span></a> <span class="item-detail">&mdash; 1.8 mi, 560ft gain. Go at opening to beat crowds and heat.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Leonard%27s+Bakery+Honolulu+HI"><span class="item-name">Leonard's Bakery</span></a> <span class="item-detail">&mdash; Malasadas on the way back. Cash only.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Pearl+Harbor+National+Memorial+Honolulu+HI"><span class="item-name">Pearl Harbor / USS Arizona Memorial</span></a> <span class="item-detail">&mdash; Late-morning/early-afternoon slot. Free timed entry, must book in advance.</span></li>
           <li><span class="item-name">Decompress at hotel</span></li>
           <li><span class="item-name">Dinner</span> <span class="item-detail">&mdash; TBD</span></li>
         </ul>
@@ -404,11 +417,11 @@ layout: none
       </summary>
       <div class="card-body">
         <ul class="items">
-          <li><span class="item-name">Drive Pali Highway</span> <span class="item-detail">&mdash; Stop at Nu'uanu Pali Lookout (dramatic mountain views)</span></li>
-          <li><span class="item-name">Lanikai Pillbox Hike</span> <span class="item-detail">&mdash; 1.8 mi, moderate scramble. Lanikai + Mokulua Islands views from above.</span></li>
-          <li><span class="item-name">Lanikai Beach</span> <span class="item-detail">&mdash; Small, protected, incredible color. Mokulua Island views.</span></li>
-          <li><span class="item-name">Kailua Beach</span> <span class="item-detail">&mdash; White sand, turquoise water, more space. 10 min from Lanikai.</span></li>
-          <li><span class="item-name">Kalapawai Market</span> <span class="item-detail">&mdash; Kailua. Local sandwiches for lunch.</span></li>
+          <li><span class="item-name">Drive Pali Highway</span> <span class="item-detail">&mdash; Stop at <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Nu%27uanu+Pali+Lookout+Honolulu+HI">Nu'uanu Pali Lookout</a> (dramatic mountain views)</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Lanikai+Pillbox+Hike+Kailua+HI"><span class="item-name">Lanikai Pillbox Hike</span></a> <span class="item-detail">&mdash; 1.8 mi, moderate scramble. Lanikai + Mokulua Islands views from above.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Lanikai+Beach+Kailua+HI"><span class="item-name">Lanikai Beach</span></a> <span class="item-detail">&mdash; Small, protected, incredible color. Mokulua Island views.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Kailua+Beach+Park+Kailua+HI"><span class="item-name">Kailua Beach</span></a> <span class="item-detail">&mdash; White sand, turquoise water, more space. 10 min from Lanikai.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Kalapawai+Market+Kailua+HI"><span class="item-name">Kalapawai Market</span></a> <span class="item-detail">&mdash; Kailua. Local sandwiches for lunch.</span></li>
           <li><span class="item-name">Return to Waikiki</span></li>
           <li><span class="item-name">Dinner</span> <span class="item-detail">&mdash; TBD</span></li>
         </ul>
@@ -426,11 +439,11 @@ layout: none
       <div class="card-body">
         <ul class="items">
           <li><span class="item-name">Drive up the Windward coast</span> <span class="item-detail">&mdash; More scenic than H-1</span></li>
-          <li><span class="item-name">Kualoa Ranch</span> <span class="item-detail">&mdash; Jurassic Park valley. ATV or horseback optional.</span></li>
-          <li><span class="item-name">Secret Island</span> <span class="item-detail">&mdash; Private beach via Kualoa tours. Dramatic Ko'olau backdrop. Most tourists don't know it exists.</span></li>
-          <li><span class="item-name">Giovanni's Shrimp Truck</span> <span class="item-detail">&mdash; Kahuku. Lunch stop.</span></li>
-          <li><span class="item-name">Haleiwa town</span> <span class="item-detail">&mdash; Surf culture hub, shops</span></li>
-          <li><span class="item-name">Matsumoto's Shave Ice</span> <span class="item-detail">&mdash; Since 1951</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Kualoa+Ranch+Kaneohe+HI"><span class="item-name">Kualoa Ranch</span></a> <span class="item-detail">&mdash; Jurassic Park valley. ATV or horseback optional.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Secret+Island+Kualoa+Ranch+Kaneohe+HI"><span class="item-name">Secret Island</span></a> <span class="item-detail">&mdash; Private beach via Kualoa tours. Dramatic Ko'olau backdrop. Most tourists don't know it exists.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Giovanni%27s+Shrimp+Truck+Kahuku+HI"><span class="item-name">Giovanni's Shrimp Truck</span></a> <span class="item-detail">&mdash; Kahuku. Lunch stop.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Haleiwa+Town+HI"><span class="item-name">Haleiwa town</span></a> <span class="item-detail">&mdash; Surf culture hub, shops</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Matsumoto+Shave+Ice+Haleiwa+HI"><span class="item-name">Matsumoto's Shave Ice</span></a> <span class="item-detail">&mdash; Since 1951</span></li>
           <li><span class="item-name">Return via H-2 or coastal loop</span></li>
           <li><span class="item-name">Dinner</span> <span class="item-detail">&mdash; TBD</span></li>
         </ul>
@@ -448,9 +461,9 @@ layout: none
       <div class="card-body">
         <ul class="items">
           <li><span class="item-name">Sleep in. Hotel pool.</span> <span class="item-detail">&mdash; Use the $100 Amex property credit.</span></li>
-          <li><span class="item-name">Waikiki Beach or Ala Moana Beach Park</span> <span class="item-detail">&mdash; Ala Moana is the local favorite, less crowded</span></li>
-          <li><span class="item-name">Honolulu Museum of Art</span> <span class="item-detail">&mdash; Optional. Or keep it fully relaxed.</span></li>
-          <li><span class="item-name">House Without a Key at Halekulani</span> <span class="item-detail">&mdash; Sunset cocktails. Open air, live Hawaiian music, hula dancer. Next door.</span></li>
+          <li><span class="item-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Waikiki+Beach+Honolulu+HI">Waikiki Beach</a> or <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ala+Moana+Beach+Park+Honolulu+HI">Ala Moana Beach Park</a></span> <span class="item-detail">&mdash; Ala Moana is the local favorite, less crowded</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Honolulu+Museum+of+Art+Honolulu+HI"><span class="item-name">Honolulu Museum of Art</span></a> <span class="item-detail">&mdash; Optional. Or keep it fully relaxed.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=House+Without+a+Key+Honolulu+HI"><span class="item-name">House Without a Key at Halekulani</span></a> <span class="item-detail">&mdash; Sunset cocktails. Open air, live Hawaiian music, hula dancer. Next door.</span></li>
           <li><span class="item-name">Dinner</span> <span class="item-detail">&mdash; TBD</span></li>
         </ul>
       </div>
@@ -466,7 +479,7 @@ layout: none
       </summary>
       <div class="card-body">
         <ul class="items">
-          <li><span class="item-name">Chinatown Honolulu</span> <span class="item-detail">&mdash; Walkable. Art galleries, local food stalls.</span></li>
+          <li><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Chinatown+Honolulu+HI"><span class="item-name">Chinatown Honolulu</span></a> <span class="item-detail">&mdash; Walkable. Art galleries, local food stalls.</span></li>
           <li><span class="item-name">Afternoon: flexible</span> <span class="item-detail">&mdash; Revisit a beach, catch something you missed, or stay in Waikiki</span></li>
           <li><span class="item-name">Dinner</span> <span class="item-detail">&mdash; TBD</span></li>
         </ul>
@@ -519,42 +532,42 @@ layout: none
       <summary><span class="cat-icon">🍷</span> Nice Dinners</summary>
       <div class="card-body">
         <div class="resto-item">
-          <div class="resto-name">Sushi Sho</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Sushi+Sho+Honolulu+HI">Sushi Sho</a></div>
           <div class="resto-meta">Omakase &middot; Waikiki</div>
           <div class="resto-desc">Elite omakase, intimate counter. Bara chirashi takeout if you can't get in.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">The Pig and the Lady</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=The+Pig+and+the+Lady+Honolulu+HI">The Pig and the Lady</a></div>
           <div class="resto-meta">Vietnamese-Hawaiian &middot; Chinatown &middot; James Beard semifinalist</div>
           <div class="resto-desc">Must-order: pho French dip. Cross-source consensus pick (Eater, Infatuation).</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Mud Hen Water</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mud+Hen+Water+Honolulu+HI">Mud Hen Water</a></div>
           <div class="resto-meta">Farm-to-table Hawaiian &middot; James Beard semifinalist</div>
           <div class="resto-desc">Porchetta with lu'au, sausage and clams in coconut broth. Also strong for brunch.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">MW Restaurant</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=MW+Restaurant+Honolulu+HI">MW Restaurant</a></div>
           <div class="resto-meta">Hawaii Regional</div>
           <div class="resto-desc">Less hyped, highly respected locally. Mochi-crusted kampachi, miso honey butterfish.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Nami Kaze</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Nami+Kaze+Honolulu+HI">Nami Kaze</a></div>
           <div class="resto-meta">Modern &middot; Honolulu Magazine near-sweep 2022</div>
           <div class="resto-desc">Hamachi crudo, cold-smoked tomatoes with tofu. Refined, not stiff.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">O'Kims</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=O%27Kims+Honolulu+HI">O'Kims</a></div>
           <div class="resto-meta">Modern Korean &middot; James Beard semifinalist</div>
           <div class="resto-desc">Confit pork belly brulee, truffle mandoo. Current insider buzz pick.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Pizza Mamo</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Pizza+Mamo+Honolulu+HI">Pizza Mamo</a></div>
           <div class="resto-meta">Pizza &middot; Brooklyn + Detroit style</div>
           <div class="resto-desc">Eater calls its pies some of the best on or off the island.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Bocconcino</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Bocconcino+Honolulu+HI">Bocconcino</a></div>
           <div class="resto-meta">Italian &middot; Deli by day, Neapolitan by night</div>
           <div class="resto-desc">Mortadella panini with stracciatella and pistachios. Carbonara pizza.</div>
         </div>
@@ -565,25 +578,25 @@ layout: none
       <summary><span class="cat-icon">🍤</span> Local / Iconic / Casual</summary>
       <div class="card-body">
         <div class="resto-item">
-          <div class="resto-name">Leonard's Bakery</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Leonard%27s+Bakery+Honolulu+HI">Leonard's Bakery</a></div>
           <div class="resto-desc">Malasadas (Portuguese donuts). Cash only. Hawaii institution.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Giovanni's Shrimp Truck</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Giovanni%27s+Shrimp+Truck+Kahuku+HI">Giovanni's Shrimp Truck</a></div>
           <div class="resto-meta">Kahuku &middot; North Shore</div>
           <div class="resto-desc">Pairs with the Day 4 loop.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Matsumoto's Shave Ice</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Matsumoto+Shave+Ice+Haleiwa+HI">Matsumoto's Shave Ice</a></div>
           <div class="resto-meta">Haleiwa &middot; Since 1951</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">Kalapawai Market</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Kalapawai+Market+Kailua+HI">Kalapawai Market</a></div>
           <div class="resto-meta">Kailua</div>
           <div class="resto-desc">Local sandwiches. Natural lunch on the windward coast day.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name">House Without a Key</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=House+Without+a+Key+Honolulu+HI">House Without a Key</a></div>
           <div class="resto-meta">Halekulani &middot; Sunset cocktails only</div>
           <div class="resto-desc">Live Hawaiian music, hula dancer. Next door to our hotel.</div>
         </div>
@@ -611,25 +624,25 @@ layout: none
       <summary><span class="cat-icon">🥾</span> Active</summary>
       <div class="card-body">
         <div class="idea-item">
-          <div class="idea-name">Lanikai Pillbox Hike at sunrise</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Lanikai+Pillbox+Hike+Kailua+HI">Lanikai Pillbox Hike at sunrise</a></div>
           <div class="idea-desc">Best hike-to-view ratio on the island. Sunrise version is uncrowded, light on the Mokuluas is a different experience.</div>
           <span class="idea-tag">Already in Day 3</span>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Hanauma Bay snorkeling</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Hanauma+Bay+Nature+Preserve+Honolulu+HI">Hanauma Bay snorkeling</a></div>
           <div class="idea-desc">Protected marine reserve inside a volcanic crater. Reef in knee-deep water. Book the early timed slot.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Koko Head Crater Stairs</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Koko+Head+Crater+Trailhead+Honolulu+HI">Koko Head Crater Stairs</a></div>
           <div class="idea-desc">1,048 railroad-tie steps straight up. The serious hike. Fully exposed, go at sunrise. Pairs with Hanauma Bay morning.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Kayak to Mokulua Islands</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mokulua+Islands+Kailua+HI">Kayak to Mokulua Islands</a></div>
           <div class="idea-desc">~30 min paddle from Lanikai to a protected cove on Moku Nui. Most tourists stop at the beach.</div>
           <span class="idea-tag">Pairs with Pillbox morning</span>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Secret Island at Kualoa Ranch</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Secret+Island+Kualoa+Ranch+Kaneohe+HI">Secret Island at Kualoa Ranch</a></div>
           <div class="idea-desc">Private beach via their tours. Ko'olau mountain wall backdrop. Jurassic Park filming location.</div>
           <span class="idea-tag">Already in Day 4</span>
         </div>
@@ -640,24 +653,24 @@ layout: none
       <summary><span class="cat-icon">🌺</span> Relaxing</summary>
       <div class="card-body">
         <div class="idea-item">
-          <div class="idea-name">House Without a Key at sunset</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=House+Without+a+Key+Honolulu+HI">House Without a Key at sunset</a></div>
           <div class="idea-desc">Open-air, live steel guitar, hula dancer, Mai Tai. Next door to our hotel. The anti-luau.</div>
           <span class="idea-tag">Already in Day 5</span>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Ala Moana Beach Park</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ala+Moana+Beach+Park+Honolulu+HI">Ala Moana Beach Park</a></div>
           <div class="idea-desc">Where locals go. Calm protected water, wide beach, no tourists. 10 min from hotel. Bring takeout poke.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Spa day at Halepuna or Halekulani</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=SpaHalekulani+Honolulu+HI">Spa day at Halepuna or Halekulani</a></div>
           <div class="idea-desc">Use the $100 Amex credit at the pool. Check if Halekulani next door offers spa access.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Early morning Waikiki walk</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Waikiki+Beach+Honolulu+HI">Early morning Waikiki walk</a></div>
           <div class="idea-desc">Before 7am. Nearly empty, soft light, still water. Free.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Honolulu Museum of Art</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Honolulu+Museum+of+Art+Honolulu+HI">Honolulu Museum of Art</a></div>
           <div class="idea-desc">1920s Mediterranean building, open-air courtyards. Monet, Picasso, Hokusai, strong Asian art. Air-conditioned.</div>
           <span class="idea-tag">Day 5 option</span>
         </div>
@@ -668,25 +681,25 @@ layout: none
       <summary><span class="cat-icon">🐟</span> Foodie</summary>
       <div class="card-body">
         <div class="idea-item">
-          <div class="idea-name">Senia</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Senia+Honolulu+HI">Senia</a></div>
           <div class="idea-desc">Chef Chris Kajioka, most respected in Hawaii. Counter seating Saturday = watching the tasting menu composed.</div>
           <span class="idea-tag">Booked &middot; Night 1</span>
         </div>
         <div class="idea-item">
           <div class="idea-name">Poke crawl</div>
-          <div class="idea-desc">Ono Seafood (shoyu ahi, the OG), Maguro Brothers (KCC or standalone), Fort Ruger Market (neighborhood sleeper). Rolling lunch.</div>
+          <div class="idea-desc"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ono+Seafood+Kapahulu+Honolulu+HI">Ono Seafood</a> (shoyu ahi, the OG), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Maguro+Brothers+Waikiki+Honolulu+HI">Maguro Brothers</a> (KCC or standalone), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Fort+Ruger+Market+Honolulu+HI">Fort Ruger Market</a> (neighborhood sleeper). Rolling lunch.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Giovanni's Shrimp Truck</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Giovanni%27s+Shrimp+Truck+Kahuku+HI">Giovanni's Shrimp Truck</a></div>
           <div class="idea-desc">Scampi is the canonical order, hot &amp; spicy is the sleeper.</div>
           <span class="idea-tag">Day 4</span>
         </div>
         <div class="idea-item">
-          <div class="idea-name">KCC Farmers Market</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=KCC+Farmers+Market+Honolulu+HI">KCC Farmers Market</a></div>
           <div class="idea-desc">Saturday 7:30-11am. Where locals eat. Fresh poke, grilled mochi, local fruit. Tight on our Saturdays&mdash;check Blaisdell Wed market.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Leonard's Bakery malasadas</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Leonard%27s+Bakery+Honolulu+HI">Leonard's Bakery malasadas</a></div>
           <div class="idea-desc">Haupia filled + original sugar, eat hot. Cash only.</div>
           <span class="idea-tag">Day 2</span>
         </div>
@@ -697,23 +710,23 @@ layout: none
       <summary><span class="cat-icon">✨</span> Date Night</summary>
       <div class="card-body">
         <div class="idea-item">
-          <div class="idea-name">Sushi Sho</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Sushi+Sho+Honolulu+HI">Sushi Sho</a></div>
           <div class="idea-desc">Intimate counter, omakase format. In Waikiki, no driving. Reserve early, small space.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">O'Kims</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=O%27Kims+Honolulu+HI">O'Kims</a></div>
           <div class="idea-desc">James Beard semifinalist. Modern Korean, inventive. The "in the know" pick.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">The Pig and the Lady</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=The+Pig+and+the+Lady+Honolulu+HI">The Pig and the Lady</a></div>
           <div class="idea-desc">Vietnamese-Hawaiian fusion. Pho French dip. More energetic vibe. Chinatown pairs with gallery walk.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Nami Kaze</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Nami+Kaze+Honolulu+HI">Nami Kaze</a></div>
           <div class="idea-desc">Honolulu Magazine near-sweep. Hamachi crudo, cold-smoked tomatoes with tofu. Modern, refined, not stiff.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Mud Hen Water</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mud+Hen+Water+Honolulu+HI">Mud Hen Water</a></div>
           <div class="idea-desc">Farm-to-table. The most "of this place" dinner. Also strong for brunch.</div>
         </div>
       </div>
@@ -723,23 +736,23 @@ layout: none
       <summary><span class="cat-icon">🎲</span> Wildcard</summary>
       <div class="card-body">
         <div class="idea-item">
-          <div class="idea-name">Outrigger canoe ride</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Waikiki+Beach+Services+Outrigger+Canoe+Honolulu+HI">Outrigger canoe ride</a></div>
           <div class="idea-desc">Paddle out, catch waves coming in off Waikiki. Traditional Hawaiian water sport. 30-45 min, more intimate than a catamaran.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Yoga class at a local studio</div>
-          <div class="idea-desc">Yoga Hawaii or Still &amp; Moving Center for drop-ins. Practicing somewhere new.</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Yoga+Hawaii+Honolulu+HI">Yoga class at a local studio</a></div>
+          <div class="idea-desc">Yoga Hawaii or <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Still+and+Moving+Center+Honolulu+HI">Still &amp; Moving Center</a> for drop-ins. Practicing somewhere new.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Makapu'u Lighthouse Trail at sunrise</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Makapu%27u+Point+Lighthouse+Trail+Honolulu+HI">Makapu'u Lighthouse Trail at sunrise</a></div>
           <div class="idea-desc">Paved 2-mile clifftop walk. Nearly alone at dawn. Open Pacific + Rabbit Island views. Stacks into a windward coast morning.</div>
         </div>
         <div class="idea-item">
           <div class="idea-name">Chinatown evening cocktail crawl</div>
-          <div class="idea-desc">Bar Leather Apron (one of the best cocktail bars in the US), Tchin Tchin, Smith &amp; Kings. Pair with dim sum or pho.</div>
+          <div class="idea-desc"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Bar+Leather+Apron+Honolulu+HI">Bar Leather Apron</a> (one of the best cocktail bars in the US), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Tchin+Tchin+Honolulu+HI">Tchin Tchin</a>, <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Smith+and+Kings+Honolulu+HI">Smith &amp; Kings</a>. Pair with dim sum or pho.</div>
         </div>
         <div class="idea-item">
-          <div class="idea-name">Ka'ena Point</div>
+          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ka%27ena+Point+Trail+Waialua+HI">Ka'ena Point</a></div>
           <div class="idea-desc">5-mile flat coastal trail to the westernmost tip of Oahu. Monk seals, albatross, stark landscape. Half-day. The "we walked to the edge" story.</div>
         </div>
       </div>
@@ -757,7 +770,7 @@ layout: none
       <div class="card-body">
         <div class="booking-block">
           <div class="booking-detail">
-            <strong>Halepuna Waikiki by Halekulani</strong><br>
+            <strong><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Halepuna+Waikiki+by+Halekulani+Honolulu+HI">Halepuna Waikiki by Halekulani</a></strong><br>
             2233 Helumoa Road, Honolulu, HI 96815<br>
             <a href="tel:+18089217272">808-921-7272</a><br><br>
             <span class="label">Check-in:</span> Sat Jun 13 &nbsp;/&nbsp; <span class="label">Check-out:</span> Sat Jun 20 &nbsp;/&nbsp; 7 nights<br>
@@ -804,7 +817,7 @@ layout: none
         <div class="booking-block">
           <div class="booking-label">Senia &mdash; Chef's Counter</div>
           <div class="booking-detail">
-            75 N King St, Honolulu, HI 96817<br>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Senia+Honolulu+HI">75 N King St, Honolulu, HI 96817</a><br>
             <a href="tel:+18082005412">(808) 200-5412</a><br>
             Sat Jun 13, 6:30pm / Counter for 2 (tasting menu night)<br>
             <span class="label">Name:</span> Tim Kung<br>
@@ -832,7 +845,7 @@ layout: none
 
   <!-- Footer -->
   <div class="footer">
-    Last synced: April 26, 2026 (v4)
+    Last synced: April 26, 2026 (v5)
   </div>
 
 </body>
