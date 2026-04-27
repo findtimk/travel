@@ -357,7 +357,7 @@ layout: none
   <!-- Sticky Nav -->
   <nav class="nav">
     <a href="#itinerary"><span class="icon">📅</span> Itinerary</a>
-    <a href="#restaurants"><span class="icon">🍽</span> Restaurants</a>
+    <a href="#food"><span class="icon">🍽</span> Food</a>
     <a href="#ideas"><span class="icon">💡</span> Ideas</a>
     <a href="#bookings"><span class="icon">📋</span> Bookings</a>
     <a href="#todo"><span class="icon">☑️</span> To-Do</a>
@@ -522,34 +522,34 @@ layout: none
   </div>
 
   <!-- ════════════════════════════════════════ -->
-  <!-- RESTAURANTS -->
+  <!-- FOOD -->
   <!-- ════════════════════════════════════════ -->
-  <div class="section" id="restaurants">
-    <div class="section-header">Restaurants</div>
+  <div class="section" id="food">
+    <div class="section-header">Food</div>
     <div class="section-intro">Pick based on mood and energy each day. Not all need to be used.</div>
 
     <details class="card">
-      <summary><span class="cat-icon">🍷</span> Nice Dinners</summary>
+      <summary><span class="cat-icon">✨</span> Date Night</summary>
       <div class="card-body">
+        <div class="resto-item">
+          <div class="resto-name"><span class="confirmed">Booked</span> <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Senia+Honolulu+HI">Senia</a></div>
+          <div class="resto-meta">Chef's Counter &middot; Night 1 &middot; 6:30pm</div>
+          <div class="resto-desc">Chef Chris Kajioka, most respected in Hawaii. Counter seating Saturday = watching the tasting menu composed.</div>
+        </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Sushi+Sho+Honolulu+HI">Sushi Sho</a></div>
           <div class="resto-meta">Omakase &middot; Waikiki</div>
-          <div class="resto-desc">Elite omakase, intimate counter. Bara chirashi takeout if you can't get in.</div>
+          <div class="resto-desc">Intimate counter, omakase format. In Waikiki, no driving. Reserve early, small space. Bara chirashi takeout if you can't get in.</div>
+        </div>
+        <div class="resto-item">
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=O%27Kims+Honolulu+HI">O'Kims</a></div>
+          <div class="resto-meta">Modern Korean &middot; James Beard semifinalist</div>
+          <div class="resto-desc">Confit pork belly brulee, truffle mandoo. The "in the know" pick.</div>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=The+Pig+and+the+Lady+Honolulu+HI">The Pig and the Lady</a></div>
           <div class="resto-meta">Vietnamese-Hawaiian &middot; Chinatown &middot; James Beard semifinalist</div>
-          <div class="resto-desc">Must-order: pho French dip. Cross-source consensus pick (Eater, Infatuation).</div>
-        </div>
-        <div class="resto-item">
-          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mud+Hen+Water+Honolulu+HI">Mud Hen Water</a></div>
-          <div class="resto-meta">Farm-to-table Hawaiian &middot; James Beard semifinalist</div>
-          <div class="resto-desc">Porchetta with lu'au, sausage and clams in coconut broth. Also strong for brunch.</div>
-        </div>
-        <div class="resto-item">
-          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=MW+Restaurant+Honolulu+HI">MW Restaurant</a></div>
-          <div class="resto-meta">Hawaii Regional</div>
-          <div class="resto-desc">Less hyped, highly respected locally. Mochi-crusted kampachi, miso honey butterfish.</div>
+          <div class="resto-desc">Must-order: pho French dip. More energetic vibe. Chinatown location pairs with gallery walk.</div>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Nami+Kaze+Honolulu+HI">Nami Kaze</a></div>
@@ -557,10 +557,16 @@ layout: none
           <div class="resto-desc">Hamachi crudo, cold-smoked tomatoes with tofu. Refined, not stiff.</div>
         </div>
         <div class="resto-item">
-          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=O%27Kims+Honolulu+HI">O'Kims</a></div>
-          <div class="resto-meta">Modern Korean &middot; James Beard semifinalist</div>
-          <div class="resto-desc">Confit pork belly brulee, truffle mandoo. Current insider buzz pick.</div>
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mud+Hen+Water+Honolulu+HI">Mud Hen Water</a></div>
+          <div class="resto-meta">Farm-to-table Hawaiian &middot; James Beard semifinalist</div>
+          <div class="resto-desc">Porchetta with lu'au, sausage and clams in coconut broth. The most "of this place" dinner. Also strong for brunch.</div>
         </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="cat-icon">🍤</span> Casual / Local</summary>
+      <div class="card-body">
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Pizza+Mamo+Honolulu+HI">Pizza Mamo</a></div>
           <div class="resto-meta">Pizza &middot; Brooklyn + Detroit style</div>
@@ -571,43 +577,53 @@ layout: none
           <div class="resto-meta">Italian &middot; Deli by day, Neapolitan by night</div>
           <div class="resto-desc">Mortadella panini with stracciatella and pistachios. Carbonara pizza.</div>
         </div>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><span class="cat-icon">🍤</span> Local / Iconic / Casual</summary>
-      <div class="card-body">
+        <div class="resto-item">
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=MW+Restaurant+Honolulu+HI">MW Restaurant</a></div>
+          <div class="resto-meta">Hawaii Regional</div>
+          <div class="resto-desc">Less hyped, highly respected locally. Mochi-crusted kampachi, miso honey butterfish.</div>
+        </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Leonard%27s+Bakery+Honolulu+HI">Leonard's Bakery</a></div>
-          <div class="resto-desc">Malasadas (Portuguese donuts). Cash only. Hawaii institution.</div>
+          <div class="resto-desc">Malasadas (Portuguese donuts). Haupia filled + original sugar, eat hot. Cash only.</div>
+          <span class="idea-tag">Day 2</span>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Giovanni%27s+Shrimp+Truck+Kahuku+HI">Giovanni's Shrimp Truck</a></div>
           <div class="resto-meta">Kahuku &middot; North Shore</div>
-          <div class="resto-desc">Pairs with the Day 4 loop.</div>
+          <div class="resto-desc">Scampi is the canonical order, hot &amp; spicy is the sleeper.</div>
+          <span class="idea-tag">Day 4</span>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Matsumoto+Shave+Ice+Haleiwa+HI">Matsumoto's Shave Ice</a></div>
           <div class="resto-meta">Haleiwa &middot; Since 1951</div>
+          <span class="idea-tag">Day 4</span>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Kalapawai+Market+Kailua+HI">Kalapawai Market</a></div>
           <div class="resto-meta">Kailua</div>
           <div class="resto-desc">Local sandwiches. Natural lunch on the windward coast day.</div>
+          <span class="idea-tag">Day 3</span>
         </div>
         <div class="resto-item">
           <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=House+Without+a+Key+Honolulu+HI">House Without a Key</a></div>
-          <div class="resto-meta">Halekulani &middot; Sunset cocktails only</div>
+          <div class="resto-meta">Halekulani &middot; Sunset cocktails</div>
           <div class="resto-desc">Live Hawaiian music, hula dancer. Next door to our hotel.</div>
+          <span class="idea-tag">Day 5</span>
         </div>
       </div>
     </details>
 
     <details class="card">
-      <summary><span class="cat-icon">🔍</span> Still Looking For</summary>
+      <summary><span class="cat-icon">🐟</span> Food Experiences</summary>
       <div class="card-body">
         <div class="resto-item">
-          <div class="resto-desc">More local/casual dinner spots: plate lunch, poke, izakaya, hole-in-the-wall. Will add as we find them.</div>
+          <div class="resto-name">Poke crawl</div>
+          <div class="resto-desc"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ono+Seafood+Kapahulu+Honolulu+HI">Ono Seafood</a> (shoyu ahi, the OG), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Maguro+Brothers+Waikiki+Honolulu+HI">Maguro Brothers</a> (KCC or standalone), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Fort+Ruger+Market+Honolulu+HI">Fort Ruger Market</a> (neighborhood sleeper). Three credible spots, rolling lunch.</div>
+        </div>
+        <div class="resto-item">
+          <div class="resto-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=KCC+Farmers+Market+Honolulu+HI">KCC Farmers Market</a></div>
+          <div class="resto-meta">Saturday 7:30&ndash;11am</div>
+          <div class="resto-desc">Where locals eat Saturday mornings. Fresh poke, grilled mochi, local fruit. Tight on our Saturdays&mdash;check Blaisdell Wed market.</div>
         </div>
       </div>
     </details>
@@ -673,61 +689,6 @@ layout: none
           <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Honolulu+Museum+of+Art+Honolulu+HI">Honolulu Museum of Art</a></div>
           <div class="idea-desc">1920s Mediterranean building, open-air courtyards. Monet, Picasso, Hokusai, strong Asian art. Air-conditioned.</div>
           <span class="idea-tag">Day 5 option</span>
-        </div>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><span class="cat-icon">🐟</span> Foodie</summary>
-      <div class="card-body">
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Senia+Honolulu+HI">Senia</a></div>
-          <div class="idea-desc">Chef Chris Kajioka, most respected in Hawaii. Counter seating Saturday = watching the tasting menu composed.</div>
-          <span class="idea-tag">Booked &middot; Night 1</span>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name">Poke crawl</div>
-          <div class="idea-desc"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ono+Seafood+Kapahulu+Honolulu+HI">Ono Seafood</a> (shoyu ahi, the OG), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Maguro+Brothers+Waikiki+Honolulu+HI">Maguro Brothers</a> (KCC or standalone), <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Fort+Ruger+Market+Honolulu+HI">Fort Ruger Market</a> (neighborhood sleeper). Rolling lunch.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Giovanni%27s+Shrimp+Truck+Kahuku+HI">Giovanni's Shrimp Truck</a></div>
-          <div class="idea-desc">Scampi is the canonical order, hot &amp; spicy is the sleeper.</div>
-          <span class="idea-tag">Day 4</span>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=KCC+Farmers+Market+Honolulu+HI">KCC Farmers Market</a></div>
-          <div class="idea-desc">Saturday 7:30-11am. Where locals eat. Fresh poke, grilled mochi, local fruit. Tight on our Saturdays&mdash;check Blaisdell Wed market.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Leonard%27s+Bakery+Honolulu+HI">Leonard's Bakery malasadas</a></div>
-          <div class="idea-desc">Haupia filled + original sugar, eat hot. Cash only.</div>
-          <span class="idea-tag">Day 2</span>
-        </div>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><span class="cat-icon">✨</span> Date Night</summary>
-      <div class="card-body">
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Sushi+Sho+Honolulu+HI">Sushi Sho</a></div>
-          <div class="idea-desc">Intimate counter, omakase format. In Waikiki, no driving. Reserve early, small space.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=O%27Kims+Honolulu+HI">O'Kims</a></div>
-          <div class="idea-desc">James Beard semifinalist. Modern Korean, inventive. The "in the know" pick.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=The+Pig+and+the+Lady+Honolulu+HI">The Pig and the Lady</a></div>
-          <div class="idea-desc">Vietnamese-Hawaiian fusion. Pho French dip. More energetic vibe. Chinatown pairs with gallery walk.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Nami+Kaze+Honolulu+HI">Nami Kaze</a></div>
-          <div class="idea-desc">Honolulu Magazine near-sweep. Hamachi crudo, cold-smoked tomatoes with tofu. Modern, refined, not stiff.</div>
-        </div>
-        <div class="idea-item">
-          <div class="idea-name"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Mud+Hen+Water+Honolulu+HI">Mud Hen Water</a></div>
-          <div class="idea-desc">Farm-to-table. The most "of this place" dinner. Also strong for brunch.</div>
         </div>
       </div>
     </details>
