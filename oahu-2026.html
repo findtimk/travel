@@ -344,6 +344,80 @@ layout: none
       flex-shrink: 0;
       margin-right: 10px;
     }
+
+    /* ── Search ── */
+    .search-wrap {
+      position: sticky;
+      top: 49px;
+      z-index: 99;
+      background: var(--sand);
+      padding: 10px 16px 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 10px 36px 10px 36px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+      -webkit-appearance: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      pointer-events: none;
+    }
+    .search-clear {
+      position: absolute;
+      right: 8px;
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: var(--warm-gray);
+      color: var(--text-secondary);
+      border-radius: 50%;
+      font-size: 14px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 1;
+    }
+    .search-clear.visible { display: flex; }
+    .search-count {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 6px 4px 0;
+      min-height: 18px;
+    }
+
+    /* Search filtering states */
+    body.searching .card.no-match { display: none; }
+    body.searching .section:not(.has-match) .section-header,
+    body.searching .section:not(.has-match) .section-intro { opacity: 0.3; }
+    mark.search-hit {
+      background: #fff4a3;
+      color: var(--text);
+      padding: 0 2px;
+      border-radius: 2px;
+    }
   </style>
 </head>
 <body>
@@ -362,6 +436,16 @@ layout: none
     <a href="#bookings"><span class="icon">📋</span> Bookings</a>
     <a href="#todo"><span class="icon">☑️</span> To-Do</a>
   </nav>
+
+  <!-- Search -->
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" placeholder="Search the trip (e.g. snorkel, poke, Diamond Head)" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
+    </div>
+    <div class="search-count" id="searchCount"></div>
+  </div>
 
   <!-- ════════════════════════════════════════ -->
   <!-- ITINERARY -->
@@ -850,8 +934,133 @@ layout: none
 
   <!-- Footer -->
   <div class="footer">
-    Last synced: May 4, 2026 (v8)
+    Last synced: May 4, 2026 (v9)
   </div>
+
+  <script>
+    (function() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('searchClear');
+      const countEl = document.getElementById('searchCount');
+      const cards = Array.from(document.querySelectorAll('.card'));
+      const sections = Array.from(document.querySelectorAll('.section'));
+
+      // Snapshot original HTML so highlights can be cleanly removed.
+      const originals = new Map();
+      cards.forEach(card => originals.set(card, card.innerHTML));
+      // Remember initial open state so we can restore it when search clears.
+      const wasOpen = new Map();
+      cards.forEach(card => {
+        if (card.tagName === 'DETAILS') wasOpen.set(card, card.open);
+      });
+
+      function escapeRegex(s) {
+        return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$1');
+      }
+
+      function highlightTextNodes(root, regex) {
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+          acceptNode(node) {
+            if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+            const p = node.parentNode;
+            if (!p) return NodeFilter.FILTER_REJECT;
+            const tag = p.nodeName;
+            if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'MARK') return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        });
+        const targets = [];
+        let n;
+        while ((n = walker.nextNode())) targets.push(n);
+        targets.forEach(textNode => {
+          const text = textNode.nodeValue;
+          if (!regex.test(text)) return;
+          regex.lastIndex = 0;
+          const frag = document.createDocumentFragment();
+          let lastIdx = 0;
+          let m;
+          while ((m = regex.exec(text)) !== null) {
+            if (m.index > lastIdx) frag.appendChild(document.createTextNode(text.slice(lastIdx, m.index)));
+            const mark = document.createElement('mark');
+            mark.className = 'search-hit';
+            mark.textContent = m[0];
+            frag.appendChild(mark);
+            lastIdx = m.index + m[0].length;
+            if (m[0].length === 0) regex.lastIndex++;
+          }
+          if (lastIdx < text.length) frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+          textNode.parentNode.replaceChild(frag, textNode);
+        });
+      }
+
+      function reset() {
+        document.body.classList.remove('searching');
+        cards.forEach(card => {
+          card.classList.remove('no-match');
+          card.innerHTML = originals.get(card);
+          if (card.tagName === 'DETAILS') card.open = wasOpen.get(card);
+        });
+        sections.forEach(s => s.classList.remove('has-match'));
+        countEl.textContent = '';
+      }
+
+      function applySearch(query) {
+        const q = query.trim();
+        if (!q) { reset(); return; }
+
+        document.body.classList.add('searching');
+        const lower = q.toLowerCase();
+        const regex = new RegExp(escapeRegex(q), 'gi');
+        let matchedCards = 0;
+
+        sections.forEach(s => s.classList.remove('has-match'));
+
+        cards.forEach(card => {
+          // Restore original HTML before each pass so highlights don't compound.
+          card.innerHTML = originals.get(card);
+          const text = card.textContent.toLowerCase();
+          if (text.includes(lower)) {
+            card.classList.remove('no-match');
+            if (card.tagName === 'DETAILS') card.open = true;
+            highlightTextNodes(card, regex);
+            const section = card.closest('.section');
+            if (section) section.classList.add('has-match');
+            matchedCards++;
+          } else {
+            card.classList.add('no-match');
+          }
+        });
+
+        countEl.textContent = matchedCards
+          ? `${matchedCards} card${matchedCards === 1 ? '' : 's'} match "${q}"`
+          : `No matches for "${q}"`;
+      }
+
+      let timer;
+      input.addEventListener('input', e => {
+        const v = e.target.value;
+        clearBtn.classList.toggle('visible', v.length > 0);
+        clearTimeout(timer);
+        timer = setTimeout(() => applySearch(v), 120);
+      });
+
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        clearBtn.classList.remove('visible');
+        reset();
+        input.focus();
+      });
+
+      // Esc clears.
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+          input.value = '';
+          clearBtn.classList.remove('visible');
+          reset();
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
